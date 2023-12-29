@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de rendimento (UFU)</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to right, #0f7cc4, #0a2c71);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; 
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 20px; 
+    }
+
+    .rectangle {
+      width: 550px;
+      height: 600px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between; 
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1, p, ul, li {
+      color: #000000;
+      font-size: 18px;
+      text-align: left;
+    }
+
+    .logo {
+      width: 800px;
+      height: auto;
+      opacity: 0.7;
+      position: absolute;
+      top: 50%;
+      left: 69%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center; 
+      width: 100%;
+      margin-top: 20px; 
+    }
+
+    .button {
+      padding: 10px;
+      background-color: #0a2c71;
+      color: #ffffff;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px; 
+    }
+
+    .button:first-child {
+      margin-right: 20px;
+    }
+
+    .footer {
+      color: #ffffff; 
+      font-size: 17px;
+      text-align: center;
+      margin-top: auto; 
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+  <script>
+    function redirectToCRA() {
+      window.location.href = 'cra.html';
+    }
+
+    function redirectToMGA() {
+      window.location.href = 'mga.html'; 
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <img class="logo" src="ufu_logo_background.png" alt="Seu Logo Transparente">
+    <div class="rectangle">
+      <h1>Calculadora de rendimento</h1>
+      <p>A calculadora de rendimento acadêmico UFU permite colocar as informações necessárias para gerar o Coeficiente de Rendimento Acadêmico e a Média Geral Acumulada.</p>
+      <p>Para utilizá-la é necessário que você tenha algumas informações em mãos:</p>
+      <ul>
+        <li>carga horária e nota dos componentes curriculares matriculados;</li>
+        <li>carga horária total do curso  (para o CRA apenas);</li>
+        <li>distinguir matérias com trancamento parcial e reprovação por faltas.</li>
+      </ul>
+      <p>Se desejar calcular mais de um semestre, é importante que tenha essas informações de todos os semestres. Caso não saiba, acesse o <a href="https://www.portalestudante.ufu.br">Portal do Estudante</a> e efetue seu login, ou acesse o app UFU mobile.</p>
+      <p>Além disso, a calculadora pode ser usada para estimar quanto será o seu CRA do semestre ainda não finalizado.</p>
+
+      
+      <div class="buttons-container">
+        <button class="button" onclick="redirectToCRA()">Calcular CRA</button>
+        <button class="button" onclick="redirectToMGA()">Calcular MGA</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p> follow us on github! <a href="https://github.com/me15degrees">@me15degrees</a>  <a href="https://github.com/cromasc">@cromasc</a></p>
+  </div>
+
+</body>
+</html>
