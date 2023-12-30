@@ -4,6 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de rendimento - UFU</title>
+  <!-- Adicione essa parte no head do seu HTML -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('form').submit(function (e) {
+            e.preventDefault();
+
+            var formData = {
+                menu: $("input[name='menu']:checked").val(),
+                semesters: $("input[name='semesters']:checked").val(),
+                result_course: $("input[name='result_course']:checked").val()
+            };
+
+            $.ajax({
+                type: 'POST',
+                url: '/calculate',
+                contentType: 'application/json;charset=UTF-8',
+                data: JSON.stringify(formData),
+                success: function (response) {
+                    // Manipule a resposta do servidor aqui
+                    console.log(response.result);
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        });
+    });
+</script>
+
   <style>
     body {
       margin: 0;
@@ -77,15 +108,14 @@
     }
 
     .footer {
-      color: #ffffff; 
+      color: #ffffff;
       font-size: 17px;
       text-align: center;
-      margin-top: auto; 
       position: absolute;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 400;
     }
+    
   </style>
   <script>
     function redirectToCRA() {

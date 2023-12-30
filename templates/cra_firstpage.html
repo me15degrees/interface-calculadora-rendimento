@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do CRA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #0f7cc4, #0a2c71);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+            margin-bottom: 20px;
+        }
+
+        .rectangle {
+            width: 550px;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1, p, ul, li {
+            color: #000000;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .logo {
+            width: 800px;
+            height: auto;
+            opacity: 0.7;
+            position: absolute;
+            top: 50%;
+            left: 51%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .footer {
+            color: #ffffff;
+            font-size: 17px;
+            text-align: center;
+            position: absolute;
+            bottom: 0px;
+            left: 700px;
+        }
+
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #0a2c71;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        .buttons-send-container {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 260px;
+            z-index: 3;
+        }
+
+        .send-button,
+        .back-button,
+        .last-page-button {
+            background-color: #0a2c71;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 15px;
+            width: 45%; /* Defina a largura desejada */
+        }
+
+        .last-page-button-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            position: absolute;
+            top: 270px;
+            right: 180px;
+            z-index: 3;
+        }
+
+        .pergunta-e-radio-container {
+            text-align: center;
+            font-size: 19px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <script>
+        function redirectToMenu() {
+            window.location.href = 'index.html';
+        }
+        function redirectToLastPage() {
+            window.location.href = 'cra.html';
+        }
+        function redirectToNextPage() {
+            window.location.href = 'cra_secondpage.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="assets/ufu_logo_background.png" alt="logo-ufu">
+        <div class="rectangle">
+            <form>
+                <div class="pergunta-e-radio-container">
+                    <label>Quantos componentes curriculares matriculados no semestre?</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="componentes" value="1" checked tabindex="1">1
+                        </label>
+                        <label>
+                            <input type="radio" name="componentes" value="2" tabindex="1">2
+                        </label>
+                        <label>
+                            <input type="radio" name="componentes" value="3" tabindex="1">3
+                        </label>
+                        <label>
+                            <input type="radio" name="componentes" value="4" tabindex="1">4
+                        </label>
+                        <label>
+                            <input type="radio" name="componentes" value="5" tabindex="1">5
+                        </label>
+                        <label>
+                            <input type="radio" name="componentes" value="6" tabindex="1">6
+                        </label>
+                        <label>
+                            <input type="radio" name="componentes" value="7" tabindex="1">7
+                        </label>
+                        <label>
+                            <input type="radio" name="componentes" value="8" tabindex="1">8
+                        </label>
+                        <label>
+                            <input type="radio" name="componentes" value="9" tabindex="1">9
+                        </label>
+                        <label>
+                            <input type="radio" name="componentes" value="10" tabindex="1">10
+                        </label>
+                    </div>
+                </div>
+                <div class="pergunta-e-radio-container">
+                    <label>Quantos componentes curriculares com trancamento parcial?</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="trancamento" value="1" checked tabindex="1">1
+                        </label>
+                        <label>
+                            <input type="radio" name="trancamento" value="2" tabindex="1">2
+                        </label>
+                        <label>
+                            <input type="radio" name="trancamento" value="3" tabindex="1">3
+                        </label>
+                        <label>
+                            <input type="radio" name="trancamento" value="4" tabindex="1">4
+                        </label>
+                        <label>
+                            <input type="radio" name="trancamento" value="5" tabindex="1">5
+                        </label>
+                    </div>
+                </div>
+                <div class="pergunta-e-radio-container">
+                    <label>Quantas reprovações por frequência?</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="reprovação" value="1" checked tabindex="1">1
+                        </label>
+                        <label>
+                            <input type="radio" name="reprovação" value="2" tabindex="1">2
+                        </label>
+                        <label>
+                            <input type="radio" name="reprovação" value="3" tabindex="1">3
+                        </label>
+                        <label>
+                            <input type="radio" name="reprovação" value="4" tabindex="1">4
+                        </label>
+                        <label>
+                            <input type="radio" name="reprovação" value="5" tabindex="1">5
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <div class="buttons-send-container">
+                <button class="last-page-button" onclick="redirectToLastPage()">Voltar</button>
+                <button class="back-button" onclick="redirectToNextPage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Follow me on GitHub! <a href="https://github.com/me15degrees">@me15degrees</a></p>
+    </div>
+    <button class="menu-button" onclick="redirectToMenu()">Voltar ao menu</button>
+</body>
+</html>
