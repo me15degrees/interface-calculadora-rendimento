@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Cálculo do CRA </title>
+  <title>Cálculo do CRA</title>
   <style>
     body {
       margin: 0;
@@ -84,6 +84,16 @@
       cursor: pointer;
     }
 
+    /* Novo estilo para centralizar horizontalmente e adicionar espaçamento */
+    .pergunta-e-radio-container {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 10px; /* Reduz a margem vertical */
+      margin-top: 30px; /* Ajusta a margem superior */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   </style>
   <script>
     function redirectToMenu() {
@@ -92,21 +102,102 @@
   </script>
 </head>
 <body>
-
   <div class="container">
     <img class="logo" src="assets/ufu_logo_background.png" alt="logo-ufu">
     <div class="rectangle">
-      <h2>CRA</h2>
-      <p> aqui acontecerá o cálculo do cra</p>
-      
-      <div class="buttons-container">
-          <button class="back-button" onclick="redirectToMenu()">Voltar ao menu</button>
+      <form>
+        <div class="pergunta-e-radio-container">
+          <label>O cálculo será feito para quantos semestres?</label>
+          <div>
+            <label>
+              <input type="radio" name="semestres" value="1" checked tabindex="1">1
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="2" tabindex="1">2
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="3" tabindex="1">3
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="4" tabindex="1">4
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="5" tabindex="1">5
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="6" tabindex="1">6
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="7" tabindex="1">7
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="8" tabindex="1">8
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="9" tabindex="1">9
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="10" tabindex="1">10
+            </label>
+          </div>
         </div>
+        <div class="pergunta-e-radio-container">
+          <label>Qual a carga horária total do curso?</label>
+          <div>
+            <label>
+              <input type="radio" name="carga-horaria" value="2400 horas" checked tabindex="2">2400 horas
+            </label>
+            <label>
+              <input type="radio" name="carga-horaria" value="entre 2400 e 3600 horas" tabindex="2">entre 2400 e 3600 horas
+            </label>
+            <label>
+              <input type="radio" name="carga-horaria" value="mais de 3600 horas" tabindex="2">mais de 3600 horas
+            </label>
+          </div>
+        </div>
+        <div class="pergunta-e-radio-container">
+          <label>Quantos componentes curriculares matriculados no semestre?</label>
+          <div>
+            <label>
+              <input type="radio" name="semestres" value="1" checked tabindex="1">1
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="2" tabindex="1">2
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="3" tabindex="1">3
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="4" tabindex="1">4
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="5" tabindex="1">5
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="6" tabindex="1">6
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="7" tabindex="1">7
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="8" tabindex="1">8
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="9" tabindex="1">9
+            </label>
+            <label>
+              <input type="radio" name="semestres" value="10" tabindex="1">10
+            </label>
+          </div>
+        </div>
+      </form>
+      <div class="buttons-container">
+        <button class="back-button" onclick="redirectToMenu()">Voltar ao menu</button>
+      </div>
     </div>
-    </div>
-
+  </div>
   <div class="footer">
-    <p> follow us on github! <a href="https://github.com/me15degrees">@me15degrees</a> <a href="https://github.com/cromasc">@cromasc</a></p>
+    <p>Follow me on GitHub! <a href="https://github.com/me15degrees">@me15degrees</a></p>
   </div>
 </body>
 </html>
