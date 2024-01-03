@@ -10,6 +10,12 @@
 
 Este é um projeto em desenvolvimento de uma calculadora de rendimento (CRA e MGA) para uso de alunos da Universidade Federal de Uberlândia. O código está atualmente em fase inicial e continuará sendo atualizado conforme o desenvolvimento avança.
 
+## Cara do projeto
+
+Atualmente, tem-se apenas o esqueleto das páginas com um pouco de CSS.
+
+<img src="templates/assets/interface-menu.png">
+
 ## Funcionalidades Planejadas
 
 - [ ] Interface de usuário responsiva.
